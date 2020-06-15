@@ -87,30 +87,65 @@ tr#allFile {
 </div>
 <script>
 
-var team = ["情報システム部","経営管理部","営業部","開発本部","総務部","経理部","企画部"];
+var josys = "情報システム部";
+var kanri = "経営管理部";
+var eigyo = "営業部";
 var every = "Everyone";
-var fold = "folderName";
-var view = "viewAuth";
-var edit = "editAuth";
-var del = "deleteAuth";
+var kaihatsu = "開発本部";
+var soumu = "総務部";
+var keiri = "経理部";
+var kikaku = "企画部";
 
-for (i= 1; i< 8; i++){
+var fileManage = {
+  f001: {
+    deleteAuth: josys,
+    editAuth: josys,
+    foldername: josys,
+    viewAuth: josys,
+    },
+  f002: {
+    deleteAuth: kanri,
+    editAuth: kanri,
+    foldername: kanri,
+    viewAuth: kanri,
+    },
+  f003:{
+    deleteAuth: eigyo,
+    editAuth: eigyo,
+    foldername: eigyo,
+    viewAuth: every,
+    },
+  f004:{
+    deleteAuth: kaihatsu,
+    editAuth: kaihatsu,
+    foldername: kaihatsu,
+    viewAuth: kaihatsu,
+    },
+  f005:{
+    deleteAuth: soumu,
+    editAuth: every,
+    foldername: soumu,
+    viewAuth: every,
+    },
+  f006:{
+    deleteAuth: keiri,
+    editAuth: keiri,
+    foldername: keiri,
+    viewAuth: keiri,
+    },
+  f007:{
+    deleteAuth: kikaku,
+    editAuth: kikaku,
+    foldername: kikaku,
+    viewAuth: every,
+    },   
+}
 
-    document.getElementById(fold+i).textContent = team[i-1];
-    document.getElementById(view+i).textContent = team[i-1];
-    document.getElementById(edit+i).textContent = team[i-1];
-    document.getElementById(del+i).textContent = team[i-1];
-console.log(i);
-
-     if(i=== 3){
-        document.getElementById(view+i).textContent = every;
-     }else if(i=== 5){
-        document.getElementById(view+i).textContent = every;
-        document.getElementById(edit+i).textContent = every;
-     }else if(i === 7){
-        document.getElementById(view+i).textContent = every;
-     }
-
+for (var i= 0; i< 7; i++){
+  document.getElementById('folderName'+(i+1)).textContent = fileManage['f00'+(i+1)].foldername;
+  document.getElementById('deleteAuth'+(i+1)).textContent = fileManage['f00'+(i+1)].deleteAuth;
+  document.getElementById('editAuth'+(i+1)).textContent = fileManage['f00'+(i+1)].editAuth;
+  document.getElementById('viewAuth'+(i+1)).textContent = fileManage['f00'+(i+1)].viewAuth;
 }
 
 </script>
