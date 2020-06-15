@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+<title>ファイル管理</title>
+<style>
+h1 {
+    border:solid 3px #4169E1;
+    padding:3px;
+    color:#190707;
+    width:250px;
+}
+table {
+    border-collapse: collapse;
+}
+td {
+    padding: 4px 8px;
+    border: 1px solid #23628f;
+}
+tr#allFile {
+    background:#AFEEEE;
+}
+</style>
+</head>
+<body>
+<header>
+<div class="header-contents">
+<h1>ファイル管理一覧</h1>
+<h2>全てのフォルダとアクセス権を表示</h2>
+</div>
+</header>
+<div class="main-wrapper">
+<section>
+    <table>
+        <tr id="allFile">
+            <td>フォルダ名</td>
+            <td>閲覧権限</td>
+            <td>編集権限</td>
+            <td>削除権限</td>
+        </tr>
+        <tr>
+            <td id="folderName1"></td>
+            <td id="viewAuth1"></td>
+            <td id="editAuth1"></td>
+            <td id="deleteAuth1"></td>
+        </tr>
+        <tr>
+            <td id="folderName2"></td>
+            <td id="viewAuth2"></td>
+            <td id="editAuth2"></td>
+            <td id="deleteAuth2"></td>
+        </tr>
+        <tr>
+            <td id="folderName3"></td>
+            <td id="viewAuth3"></td>
+            <td id="editAuth3"></td>
+            <td id="deleteAuth3"></td>
+        </tr>
+        <tr>
+            <td id="folderName4"></td>
+            <td id="viewAuth4"></td>
+            <td id="editAuth4"></td>
+            <td id="deleteAuth4"></td>
+        </tr>
+        <tr>
+            <td id="folderName5"></td>
+            <td id="viewAuth5"></td>
+            <td id="editAuth5"></td>
+            <td id="deleteAuth5"></td>
+        </tr>
+        <tr>
+            <td id="folderName6"></td>
+            <td id="viewAuth6"></td>
+            <td id="editAuth6"></td>
+            <td id="deleteAuth6"></td>
+        </tr>
+        <tr>
+            <td id="folderName7"></td>
+            <td id="viewAuth7"></td>
+            <td id="editAuth7"></td>
+            <td id="deleteAuth7"></td>
+        </tr>
+    </table>
+</section>
+</div>
+<script>
+
+var team = ["情報システム部","経営管理部","営業部","開発本部","総務部","経理部","企画部"];
+var every = "Everyone";
+var fold = "folderName";
+var view = "viewAuth";
+var edit = "editAuth";
+var del = "deleteAuth";
+
+for (i= 1; i< 8; i++){
+
+    document.getElementById(fold+i).textContent = team[i-1];
+    document.getElementById(view+i).textContent = team[i-1];
+    document.getElementById(edit+i).textContent = team[i-1];
+    document.getElementById(del+i).textContent = team[i-1];
+console.log(i);
+
+     if(i=== 3){
+        document.getElementById(view+i).textContent = every;
+     }else if(i=== 5){
+        document.getElementById(view+i).textContent = every;
+        document.getElementById(edit+i).textContent = every;
+     }else if(i === 7){
+        document.getElementById(view+i).textContent = every;
+     }
+
+}
+
+</script>
+</body>
+</html>
