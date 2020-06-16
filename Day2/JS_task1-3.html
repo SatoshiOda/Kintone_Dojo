@@ -149,16 +149,16 @@ var fileManage = {
   },
 };
 
-for (var i= 0; i< 7; i++) {
-  document.getElementById('folderName'+(i + 1)).textContent = fileManage['f00'+(i + 1)].foldername;
-  document.getElementById('deleteAuth'+(i + 1)).textContent = fileManage['f00'+(i + 1)].deleteAuth;
-  document.getElementById('editAuth'+(i + 1)).textContent = fileManage['f00'+(i + 1)].editAuth;
-  document.getElementById('viewAuth'+(i + 1)).textContent = fileManage['f00'+(i + 1)].viewAuth;
+for (var i = 0; i< 7; i++) {
+  document.getElementById('folderName'+ (i + 1)).textContent = fileManage['f00'+(i + 1)].foldername;
+  document.getElementById('deleteAuth'+ (i + 1)).textContent = fileManage['f00'+(i + 1)].deleteAuth;
+  document.getElementById('editAuth'+ (i + 1)).textContent = fileManage['f00'+(i + 1)].editAuth;
+  document.getElementById('viewAuth'+ (i + 1)).textContent = fileManage['f00'+(i + 1)].viewAuth;
 
-  if (fileManage['f00'+(i + 1)].viewAuth === every) {
+  if (fileManage['f00'+ (i + 1)].viewAuth === every) {
     var newLi = document.createElement('li');
     var list = document.getElementById('list');
-    newLi.append(fileManage['f00'+(i + 1)].foldername);
+    newLi.append(fileManage['f00'+ (i + 1)].foldername);
     list.appendChild(newLi);
   }
 }
