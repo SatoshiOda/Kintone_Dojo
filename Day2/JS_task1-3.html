@@ -148,17 +148,17 @@ var fileManage = {
     editAuth: kikaku,
     foldername: kikaku,
     viewAuth: every,
-  },   
+  },
 };
 
-for (var i= 0; i< 7; i++){
-  document.getElementById('folderName'+(i+1)).textContent = fileManage['f00'+(i+1)].foldername;
-  document.getElementById('deleteAuth'+(i+1)).textContent = fileManage['f00'+(i+1)].deleteAuth;
-  document.getElementById('editAuth'+(i+1)).textContent = fileManage['f00'+(i+1)].editAuth;
-  document.getElementById('viewAuth'+(i+1)).textContent = fileManage['f00'+(i+1)].viewAuth;
+for (var i= 0; i< 7; i++) {
+  document.getElementById('folderName'+(i + 1)).textContent = fileManage['f00'+(i + 1)].foldername;
+  document.getElementById('deleteAuth'+(i + 1)).textContent = fileManage['f00'+(i + 1)].deleteAuth;
+  document.getElementById('editAuth'+(i + 1)).textContent = fileManage['f00'+(i + 1)].editAuth;
+  document.getElementById('viewAuth'+(i + 1)).textContent = fileManage['f00'+(i + 1)].viewAuth;
 
-  if (fileManage['f00'+(i+1)].viewAuth === every){
-    list.push(fileManage['f00'+(i+1)].foldername);
+  if (fileManage['f00'+(i + 1)].viewAuth === every){
+    list.push(fileManage['f00'+ (i + 1)].foldername);
   }
   document.getElementById('list').textContent = list;
 }
