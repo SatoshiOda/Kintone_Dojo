@@ -104,8 +104,6 @@ var soumu = "総務部";
 var keiri = "経理部";
 var kikaku = "企画部";
 
-var list = [];
-
 var fileManage = {
   f001: {
     deleteAuth: josys,
@@ -157,10 +155,12 @@ for (var i= 0; i< 7; i++) {
   document.getElementById('editAuth'+(i + 1)).textContent = fileManage['f00'+(i + 1)].editAuth;
   document.getElementById('viewAuth'+(i + 1)).textContent = fileManage['f00'+(i + 1)].viewAuth;
 
-  if (fileManage['f00'+(i + 1)].viewAuth === every){
-    list.push(fileManage['f00'+ (i + 1)].foldername);
+  if (fileManage['f00'+(i + 1)].viewAuth === every) {
+    var newLi = document.createElement('li');
+    var list = document.getElementById('list');
+    newLi.append(fileManage['f00'+(i + 1)].foldername);
+    list.appendChild(newLi);
   }
-  document.getElementById('list').textContent = list;
 }
 
 </script>
