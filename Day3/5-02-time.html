@@ -80,26 +80,27 @@ footer .container {
 </div>
 </footer>
 <script>
-  
+  'use strict';
   var countdown = function() {
     var now = new Date();
 
-    var sec = ("0"+now.getSeconds()).slice(-2);
-    var min = ("0"+now.getMinutes()).slice(-2);
-    var hours = ("0"+now.getHours()).slice(-2);
+    var sec = ("0" + now.getSeconds()).slice(-2);
+    var min = ("0" + now.getMinutes()).slice(-2);
+    var hours = ("0" + now.getHours()).slice(-2);
     var date = now.getDate();
     var month = now.getMonth() + 1;
     return [month, date, hours, min, sec];
   };
 
   var data = countdown();
-  document.getElementById('output').textContent = data[0] + '月' + data[1] + '日 ' + data[2] + ':'+ data[3] + ':' + data[4];
+  document.getElementById('output').textContent
+  = data[0] + '月' + data[1] + '日 ' + data[2] + ':' + data[3] + ':' + data[4];
 
   setInterval(function() {
-  var data = countdown();
-  document.getElementById('output').textContent
-   = data[0] + '月' + data[1] + '日 ' + data[2] + ':'+ data[3] + ':' + data[4];
-  }, 1000)
+    var data1 = countdown();
+    document.getElementById('output').textContent
+    = data1[0] + '月' + data1[1] + '日 ' + data1[2] + ':'+ data1[3] + ':' + data1[4];
+  }, 1000);
 
 </script>
 </body>
