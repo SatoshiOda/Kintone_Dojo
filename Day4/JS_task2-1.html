@@ -33,22 +33,22 @@ form {
 <script>
 
   var func = function() {
-		var check1 = document.getElementById('secure').checked;
-		var check2 = document.getElementById('disc').checked;
-		var priceSec = 250;
-		var priceDisc = 1000;
-		var Kintone = 3900;
+　var check1 = document.getElementById('secure').checked;
+  var check2 = document.getElementById('disc').checked;
+  var priceSec = 250;
+  var priceDisc = 1000;
+  var Kintone = 3900;
 
-		if (check1 === true && check2 === true) {
-			document.getElementById('price').textContent = Kintone + priceSec + priceDisc;
-		} else if (check1 === false && check2 === true) {
-			document.getElementById('price').textContent = Kintone + priceDisc;
-		} else if (check1 === true && check2 === false) {
-			document.getElementById('price').textContent = Kintone + priceSec;
-		} else {
-			document.getElementById('price').textContent = Kintone;
-		}
-	}
+  if (check1 === true && check2 === true) {
+    document.getElementById('price').textContent = Kintone + priceSec + priceDisc;
+  } else if (check1 === false && check2 === true) {
+    document.getElementById('price').textContent = Kintone + priceDisc;
+  } else if (check1 === true && check2 === false) {
+    document.getElementById('price').textContent = Kintone + priceSec;
+  } else {
+    document.getElementById('price').textContent = Kintone;
+  }
+}
 
 </script>
 </body>
