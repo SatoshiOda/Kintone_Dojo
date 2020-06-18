@@ -37,7 +37,7 @@ button {
         </select>
         <br>
         <input type="checkbox" id="disc">ディスク増設（10GB あたり 1000円） ×
-        <select id="GB">
+        <select id="gb">
             <option value="1">10GB</option>
             <option value="2">20GB</option>
             <option value="3">30GB</option>
@@ -52,19 +52,19 @@ document.querySelector('button').onclick = function() {
   var check1 = document.getElementById('secure').checked;
   var check2 = document.getElementById('disc').checked;
   var user = document.getElementById('user').value;
-  var GB = document.getElementById('GB').value;
+  var gb = document.getElementById('gb').value;
   var priceSec = 250 * user;
-  var priceDisc = 1000 * GB;
-  var Kintone = 3900;
+  var priceDisc = 1000 * gb;
+  var kintone = 3900;
 
   if (check1 === true && check2 === true) {
-    document.getElementById('price').textContent = Kintone + priceSec + priceDisc;
+    document.getElementById('price').textContent = kintone + priceSec + priceDisc;
   } else if (check1 === false && check2 === true) {
-    document.getElementById('price').textContent = Kintone + priceDisc;
+    document.getElementById('price').textContent = kintone + priceDisc;
   } else if (check1 === true && check2 === false) {
-    document.getElementById('price').textContent = Kintone + priceSec;
+    document.getElementById('price').textContent = kintone + priceSec;
   } else {
-    document.getElementById('price').textContent = Kintone;
+    document.getElementById('price').textContent = kintone;
   }
 }
     
