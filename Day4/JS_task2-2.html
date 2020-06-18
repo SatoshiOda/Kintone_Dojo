@@ -53,19 +53,19 @@ document.querySelector('button').onclick = function() {
   var check2 = document.getElementById('disc').checked;
   var user = document.getElementById('user').value;
   var GB = document.getElementById('GB').value;
-	var priceSec = 250 * user;
-	var priceDisc = 1000 * GB;
+  var priceSec = 250 * user;
+  var priceDisc = 1000 * GB;
   var Kintone = 3900;
 
-	if (check1 === true && check2 === true) {
-	  document.getElementById('price').textContent = Kintone + priceSec + priceDisc;
-	} else if (check1 === false && check2 === true) {
-		document.getElementById('price').textContent = Kintone + priceDisc;
-	} else if (check1 === true && check2 === false) {
-	  document.getElementById('price').textContent = Kintone + priceSec;
-	} else {
-	  document.getElementById('price').textContent = Kintone;
-	}
+  if (check1 === true && check2 === true) {
+    document.getElementById('price').textContent = Kintone + priceSec + priceDisc;
+  } else if (check1 === false && check2 === true) {
+    document.getElementById('price').textContent = Kintone + priceDisc;
+  } else if (check1 === true && check2 === false) {
+    document.getElementById('price').textContent = Kintone + priceSec;
+  } else {
+    document.getElementById('price').textContent = Kintone;
+  }
 }
     
 </script>
