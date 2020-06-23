@@ -5,7 +5,7 @@ $(document).ready(()　=> {
 
   $('#zipSearch').on('click', () => {
     const zip = $(zipCode).val();
-    console.log(url + '?query=' + zip + '&appid=' + id + '&output=json');
+    console.log('ログ！！！');
     $.ajax({
       url: `${url}?query=${zip}&appid=${id}&output=json`,
       dataType: 'jsonp'
