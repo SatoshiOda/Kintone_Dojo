@@ -2,8 +2,7 @@
 $(document).ready(()　=> {
   const id = "dj00aiZpPWJWNFFWdVRLU09DRCZzPWNvbnN1bWVyc2VjcmV0Jng9MjM-";
   const url = "https://map.yahooapis.jp/search/zip/V1/zipCodeSearch";
-
-
+  
   $('#zipSearch').on('click', () => {
     const zip = $(zipCode).val();
     if (zip === ''){
