@@ -3,10 +3,9 @@ $(document).ready(()　=> {
   const id = "dj00aiZpPWJWNFFWdVRLU09DRCZzPWNvbnN1bWVyc2VjcmV0Jng9MjM-";
   const url = "https://map.yahooapis.jp/search/zip/V1/zipCodeSearch";
 
-
   $('#zipSearch').on('click', () => {
     const zip = $(zipCode).val();
-    if (zip === ''){
+    if (zip === '') {
       window.alert('入力してください。');
       return;
     } else if (zip.match(/[^0-9]+/)) {
@@ -17,18 +16,23 @@ $(document).ready(()　=> {
       url: `${url}?query=${zip}&appid=${id}&output=json`,
       dataType: 'jsonp'
     }).done((resp) => {
-      if(resp.ResultInfo.Count === 0) {
+      if (resp.ResultInfo.Count === 0) {
         window.alert('データがありません。');
         return;
       }
       const position = (resp.Feature[0].Geometry.Coordinates).split(',');
+      console.log(resp);
       $('#adress').text(resp.Feature[0].Property.Address);
       $('#lati').text(position[0]);
       $('#long').text(position[1]);
-      $('#station').text(`${resp.Feature[0].Property.Station[0].Railway} ${resp.Feature[0].Property.Station[0].Name} 駅`);
+      const leng = resp.Feature[0].Property.Station.length;
+      var moyori = [];
+      for (var i = 0; i < leng; i ++) {
+        moyori[i] = `${resp.Feature[0].Property.Station[i].Railway} ${resp.Feature[0].Property.Station[i].Name} 駅 `; 
+      }
+      $('#station').text(moyori);
     }).fail((err) => {
-      console.log(err);
-      windows.alert('エラー')
+      windows.alert('エラー');
     });
   });
 });
