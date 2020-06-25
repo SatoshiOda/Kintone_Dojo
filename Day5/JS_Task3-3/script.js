@@ -21,13 +21,12 @@ $(document).ready(()　=> {
         return;
       }
       const position = (resp.Feature[0].Geometry.Coordinates).split(',');
-      console.log(resp);
       $('#adress').text(resp.Feature[0].Property.Address);
       $('#lati').text(position[0]);
       $('#long').text(position[1]);
       const leng = resp.Feature[0].Property.Station.length;
-      var moyori = [];
-      for (var i = 0; i < leng; i ++) {
+      let moyori = [];
+      for (let i = 0; i < leng; i ++) {
         moyori[i] = `${resp.Feature[0].Property.Station[i].Railway} ${resp.Feature[0].Property.Station[i].Name} 駅 `; 
       }
       $('#station').text(moyori);
