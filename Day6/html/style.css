@@ -1,0 +1,125 @@
+.icon {
+  width : 20vw;
+}
+
+.center {
+  text-align : center;
+}
+
+.box {
+  position : relative;
+  float : left;
+  width : 20vw;
+  font-size : 1.5vw;
+}
+
+.box span {
+  position : absolute;
+  font-family : 'Century Gothic';
+  color : white;
+  top : 0;
+  left : 0;
+}
+
+table, td, th {
+  border : 1px #000000 solid;
+  border-collapse : collapse;
+}
+
+body {
+  background-image : url("img/background.png");
+  background-attachment : fixed;
+}
+
+h1 {
+  font-family : 'Century Gothic';
+  color : #ffb142;
+  padding : 0.5em 0;
+  border-top : solid 3px #ffb142;
+  border-bottom : solid 3px #ffb142;
+  text-shadow :0px 0px 2px #FFF, 4px 4px 2px rgba(0,0,0,0.1);
+}
+
+.box3 {
+  position : relative;
+  left : 40px;
+}
+
+.box3 h3 {
+  color : #cd6133;
+  font-size : 25px;
+  text-shadow :0px 0px 2px #FFF, 4px 4px 2px rgba(0,0,0,0.1);
+}
+
+.box2 h3{
+  position : relative;
+  left : 40px;
+  color : #cd6133;
+  font-size : 25px;
+  text-shadow :0px 0px 2px #FFF, 4px 4px 2px rgba(0,0,0,0.1);
+}
+
+.box2 ul {
+  margin: auto;
+  padding: 1.5em;
+  width: 40%;
+  background-color: #f7d794;
+  border: 2px solid #cd6133;
+}
+
+.box2 span {
+  font-size: x-small;
+}
+
+.ptj img {
+  height: 150px;
+  margin-right: 2px;
+  margin-bottom: 2px;
+  border: 3px solid #d35400
+}
+
+.ptj h3 {
+  position : relative;
+  left : 40px;
+  color : #cd6133;
+  font-size : 25px;
+  text-shadow :0px 0px 2px #FFF, 4px 4px 2px rgba(0,0,0,0.1);
+}
+
+.cat {
+  position : relative;
+  display:inline-block;
+  margin : 2em 0 2em 40px;
+  padding : 15px;
+  background : #ffbe76;
+  border-radius : 30px;
+  bottom : 60px
+}
+
+.cat:before {  
+  content : "";
+  position: absolute;
+  left: -38px;
+  width: 13px;
+  height: 12px;
+  bottom: 30px;
+  background: #ffbe76;
+  border-radius: 50%;
+}
+
+.cat:after {
+  content: "";
+  position: absolute;
+  left: -24px;
+  width: 20px;
+  height: 18px;
+  bottom: 20px;
+  background: #ffbe76;
+  border-radius: 50%;
+}
+
+.cat p {
+  margin: 0; 
+  padding: 0;
+  font-family: serif;
+}
