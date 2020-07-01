@@ -1,0 +1,55 @@
+<html>
+
+<head>
+<title>kintone の月額料金</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<style type="text/css">
+h1 {
+    border:solid 3px #FFBF00;
+    padding:3px;
+    color:#190707;
+    width: 400px;
+}
+div.user {
+    font-size:14pt;
+    font-weight:bold;
+}
+form {
+    margin-left:20px;
+}
+
+</style>
+</head>
+<body>
+    <h1>kintone のライセンス料</h1>
+    <div class="user">最低ユーザー数(ライトコース)での利用料金</div>
+    <br>
+    <form>
+        <input type="checkbox" id="secure" onchange="func();">セキュアオプション（1ユーザー あたり 250円）<br>
+        <input type="checkbox" id="disc" onchange="func();">ディスク増設（10GB あたり 1000円）<br>
+        <h4>月額金額：<span id="price">3900</span>円</h4>
+    </form>
+<script>
+
+var func = function() {
+  var check1 = document.getElementById('secure').checked;
+  var check2 = document.getElementById('disc').checked;
+  var priceSec = 250;
+  var priceDisc = 1000;
+  var kintone = 3900;
+
+  if (check1 === true && check2 === true) {
+    document.getElementById('price').textContent = kintone + priceSec + priceDisc;
+  } else if (check1 === false && check2 === true) {
+    document.getElementById('price').textContent = kintone + priceDisc;
+  } else if (check1 === true && check2 === false) {
+    document.getElementById('price').textContent = kintone + priceSec;
+  } else {
+    document.getElementById('price').textContent = kintone;
+  }
+};
+
+</script>
+</body>
+</html>
