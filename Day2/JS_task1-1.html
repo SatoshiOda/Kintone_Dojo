@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+<title>ファイル管理</title>
+<style>
+h1 {
+    border:solid 3px #4169E1;
+    padding:3px;
+    color:#190707;
+    width:250px;
+}
+</style>
+</head>
+<body>
+<header>
+<div class="header-contents">
+<h1>ファイル管理一覧</h1>
+<h2>全てのフォルダとアクセス権を表示</h2>
+</div>
+</header>
+<script>
+var josys = "情報システム部";
+var kanri = "経営管理部";
+var eigyo = "営業部";
+var every = "Everyone";
+var kaihatsu = "開発本部";
+var soumu = "総務部";
+var keiri = "経理部";
+var kikaku = "企画部";
+
+var fileManage = {
+  f001: {
+    deleteAuth: josys,
+    editAuth: josys,
+    foldername: josys,
+    viewAuth: josys,
+  },
+  f002: {
+    deleteAuth: kanri,
+    editAuth: kanri,
+    foldername: kanri,
+    viewAuth: kanri,
+  },
+  f003: {
+    deleteAuth: eigyo,
+    editAuth: eigyo,
+    foldername: every,
+    viewAuth: eigyo,
+  },
+  f004: {
+    deleteAuth: kaihatsu,
+    editAuth: kaihatsu,
+    foldername: kaihatsu,
+    viewAuth: kaihatsu,
+  },
+  f005: {
+    deleteAuth: soumu,
+    editAuth: every,
+    foldername: every,
+    viewAuth: soumu,
+  },
+  f006: {
+    deleteAuth: keiri,
+    editAuth: keiri,
+    foldername: keiri,
+    viewAuth: keiri,
+  },
+  f007: {
+    deleteAuth: kikaku,
+    editAuth: kikaku,
+    foldername: every,
+    viewAuth: kikaku,
+  },
+};
+
+console.log(fileManage);
+
+</script>
+</body>
+</html>
